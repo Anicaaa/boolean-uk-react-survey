@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Form from "";
+import Form from "./Form";
 
 function Main() {
   const [open, setOpen] = useState(false); //Ignore this state
