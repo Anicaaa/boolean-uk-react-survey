@@ -1,12 +1,19 @@
-<form className="form">
+import RadioButtons from "./RadioButtons";
+import CheckBoxes from "./CheckBoxes";
+
+function Form() {
+  const [open, setOpen] = useState(false); //Ignore this state
+
+  return (
+  <form className="form">
   <h2>Tell us what you think about your rubber duck!</h2>
   <div className="form__group radio">
     <h3>How do you rate your rubber duck colour?</h3>
-    <!-- Radio inputs go here -->
+    <RadioButtons />
   </div>
   <div className="form__group">
     <h3>How do you like to spend time with your rubber duck</h3>
-    <!-- checkboxes go here -->
+    <CheckBoxes />
   </div>
   <label
     >What else have you got to say about your rubber duck?<textarea
@@ -26,3 +33,7 @@
       value="" /></label
   ><input className="form__submit" type="submit" value="Submit Survey!" />
 </form>
+  );
+}
+
+export default Form;
